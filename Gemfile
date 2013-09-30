@@ -8,10 +8,6 @@ gem 'sinatra-redirect-with-flash'
 gem 'pg'
 
 group :development, :test do
-	gem 'pg'
-	gem 'rspec'	
-end
-
-group :production do 
-	gem 'pg'
+	gem 'rspec'
+	gem 'capybara'	
 end
