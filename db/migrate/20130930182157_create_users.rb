@@ -6,7 +6,9 @@ class CreateUsers < ActiveRecord::Migration
   		t.string :password
   		t.string :username
   		t.string :email 
+  	end
   end
+
 
   def down
   	drop_table :users
