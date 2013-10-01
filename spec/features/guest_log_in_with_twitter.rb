@@ -4,6 +4,8 @@ require 'app/app'
 require 'capybara/rspec'
 Capybara.app = Sinatra::Application
 
+OmniAuth.config.test_mode = true
+
 describe "guest logs in with twitter", :type => :feature do
 		it "redirects them to the home page" do
 		visit '/'
