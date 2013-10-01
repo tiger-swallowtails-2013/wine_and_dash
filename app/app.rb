@@ -1,16 +1,22 @@
 require 'sinatra'
 require 'dotenv'
-Dotenv.load('.env.development')
-
 require 'omniauth'
 require 'omniauth-twitter'
+Dotenv.load('.env.development')
 
-# use Rack::Session::Cookie
+$LOAD_PATH.unshift(File.expand_path('.'))
+
+require 'sinatra/activerecord'
+
+set :database, ENV['DATABASE_URL']
+require 'app/models/user'
+require 'app/models/winery'
+
 
 enable :sessions
 
 use OmniAuth::Builder do
-	provider :twitter, ENV['myWvZNAobyLIjMX8i8hpnA'], ENV['gtVBq56q4FrCF28tRHry8wKedkhswF5RB2wtdmveM']
+	provider :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET']
 end
 
 get '/' do
@@ -18,5 +24,6 @@ get '/' do
 end
 
 get '/auth/twitter/callback' do
+  p env['omniauth.auth']
 	redirect '/'
 end
