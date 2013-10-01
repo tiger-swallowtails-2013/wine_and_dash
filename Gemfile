@@ -5,10 +5,12 @@ gem 'sinatra'
 gem 'sinatra-activerecord'
 gem 'sinatra-flash'
 gem 'sinatra-redirect-with-flash'
-gem 'pg'
+
 
 group :development do
 	gem 'pg'	
+  gem 'tux'
+  gem 'rack-test'
 end
 
 group :production do 
