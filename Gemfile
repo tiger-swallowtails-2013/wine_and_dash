@@ -5,14 +5,16 @@ gem 'sinatra'
 gem 'sinatra-activerecord'
 gem 'sinatra-flash'
 gem 'sinatra-redirect-with-flash'
+gem 'pg'
+gem 'omniauth'
+gem 'omniauth-twitter'
 
-
-group :development do
-	gem 'pg'	
-  gem 'tux'
-  gem 'rack-test'
+group :development, :test do
+	gem 'rspec'
+	gem 'capybara'
+	gem 'dotenv'
+	gem 'racksh'
 end
 
-group :production do 
-	gem 'pg'
-end
+# group :production do 
+# end
