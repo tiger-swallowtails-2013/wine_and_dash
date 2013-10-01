@@ -1,5 +1,13 @@
 $LOAD_PATH.unshift(File.expand_path('.'))
 require 'sinatra/activerecord/rake'
+<<<<<<< HEAD
+require 'dotenv/tasks'
+require_relative './app/controllers/index'
+
+task :mytask => :dotenv do
+
+end
+=======
 require 'app/controllers/index'
 require 'lib/tasks'
 require 'csv'
@@ -12,3 +20,4 @@ namespace :data do
     end
   end
 end
+>>>>>>> 58d0f6aea757fd77628aaadd5dc0cce47d61d23d
