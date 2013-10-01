@@ -27,3 +27,6 @@ get '/auth/twitter/callback' do
   p env['omniauth.auth']
 	redirect '/'
 end
+
+
+

@@ -4,6 +4,7 @@ require 'open-uri'
 require 'csv'
 
 
+puts "I see you scraping"
 doc = Nokogiri::HTML(open('http://www.napavintners.com/wineries/wineries_tastings.asp')) do |config|
   config.strict.nonet
 end

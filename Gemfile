@@ -15,6 +15,3 @@ group :development, :test do
 	gem 'dotenv'
 	gem 'racksh'
 end
-
-# group :production do 
-# end
