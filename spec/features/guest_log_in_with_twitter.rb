@@ -21,3 +21,4 @@ describe "guest logs in with twitter", :type => :feature do
 		it "does not create a new user"
 	end
 end
+

@@ -1,11 +1,13 @@
 require 'sinatra'
 require 'dotenv'
-Dotenv.load('env.development')
+Dotenv.load('.env.development')
 
 require 'omniauth'
 require 'omniauth-twitter'
 
-use Rack::Session::Cookie
+# use Rack::Session::Cookie
+
+enable :sessions
 
 use OmniAuth::Builder do
 	provider :twitter, ENV['myWvZNAobyLIjMX8i8hpnA'], ENV['gtVBq56q4FrCF28tRHry8wKedkhswF5RB2wtdmveM']
