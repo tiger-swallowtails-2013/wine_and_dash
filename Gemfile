@@ -12,5 +12,6 @@ gem 'omniauth-twitter'
 group :development, :test do
 	gem 'rspec'
 	gem 'capybara'
-	gem 'dotenv'	
+	gem 'dotenv'
+	gem 'racksh'
 end
