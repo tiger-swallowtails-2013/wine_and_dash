@@ -10,3 +10,6 @@ configure :production, :development do
 		:encoding => 'utf8'
 	)
 end
+
+require 'app/models/winery'
+require 'app/models/user'
